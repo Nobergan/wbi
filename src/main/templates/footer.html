@@ -1,0 +1,42 @@
+<footer class="footer">
+  <div class="container">
+
+    <form method="POST" action="thanks/index.php" class="form" id="form">
+      <h2 class="form__title">Заполните форму <br>ПРЯМО СЕЙЧАС
+      </h2>
+      <div class="input_wrapper">
+        <div>
+          <input name="f_name" placeholder="Ваше имя" />
+        </div>
+        <div>
+          <input name="l_name" placeholder="Ваша фамилия" />
+        </div>
+        <div>
+          <input type="email" name="email" placeholder="Ваш e-mail" />
+        </div>
+        <style>
+          .iti__flag-container {
+            z-index: 50;
+          }
+
+          .iti-mobile .iti__country-list {
+            width: 85%;
+          }
+        </style>
+        <input type="tel" name="phone" placeholder="Ваш телефон" autocomplete="off" required />
+        <input type="hidden" name="phone2" class="phone2" autocomplete="off" required />
+        <input type="hidden" name="pixel_id" value="<?php echo $FacebookPixel?>" />
+        <input type="hidden" name="page_lang" value="<?php echo $page_lang?>" />
+        <input type="hidden" name="query" value="<?php echo $QUERY?>" />
+        <input type="hidden" name="gp_id" value="<?php echo $gp?>" />
+        <input type="hidden" name="hs_id" value="<?php echo $hs?>" />
+        <input type="hidden" name="landing" value="WILDBERRIES" />
+
+        <button class="form__btn" type="submit">
+          Подать заявку
+        </button>
+      </div>
+    </form>
+
+  </div>
+</footer>

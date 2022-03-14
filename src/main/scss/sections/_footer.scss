@@ -1,0 +1,68 @@
+.footer {
+  padding: 279px 0 133px;
+
+  background-image: url("../../img/footer/footer_bg-img.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include for-size(tablet-only) {
+    padding: 279px 0 178px;
+
+    background-image: url("../../img/footer/footer_bg-img-mob.png");
+  }
+}
+
+.form {
+  max-width: 375px;
+  padding: 40px 35px 60px;
+  margin: 0 auto;
+
+  background: #ffffff;
+
+  @include for-size(tablet-only) {
+    padding: 39px 20px 32px;
+  }
+
+  &__title {
+    margin: 0 0 30px;
+
+    @include font(bold, 24px, 1.4);
+    text-align: center;
+    letter-spacing: -0.025em;
+
+    color: #333333;
+  }
+
+  & input {
+    width: 100%;
+    padding: 14px 20px;
+
+    background: #f5f7f9;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+  }
+
+  & input::placeholder {
+    @include font(normal, 12px, 1.3);
+    text-align: center;
+
+    color: #333333;
+  }
+
+  .iti--separate-dial-code input[type="tel"] {
+    padding-right: 91px;
+  }
+
+  &__btn {
+    width: 100%;
+    padding: 10px;
+    margin: 32px 0 0;
+
+    @include font(bold, 16px, 1.6);
+    text-align: center;
+
+    color: #ffffff;
+    background: linear-gradient(90deg, #ca11aa 0%, #491173 100%), #ffdd2d;
+    border-radius: 12px;
+  }
+}

@@ -1,0 +1,99 @@
+// GRID AREA NAMES
+
+.fourth__text-box {
+  grid-area: fourth__text-box;
+}
+
+.fourth__img {
+  grid-area: fourth__img;
+}
+
+// MAIN
+
+.fourth {
+  padding: 210px 0 40px;
+
+  background: #ffffff;
+
+  background-image: url("../../img/fourth/fourth_bg-img.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @include for-size(mobile-only) {
+    display: none;
+  }
+
+  &__title {
+    margin: 0 0 24px;
+
+    @include font(900, 40px, 1.2);
+
+    background: -webkit-linear-gradient(#ca11aa, #491173);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    border: 8px solid #ffffff;
+
+    @include for-size(tablet-only) {
+      margin: 0 0 19px;
+      @include font(900, 32px, 1.2);
+    }
+  }
+
+  &__text {
+    margin: 0 0 24px;
+
+    @include font(normal, 24px, 1.2);
+
+    color: #000000;
+
+    @include for-size(tablet-only) {
+      margin: 0 0 21px;
+      @include font(normal, 14px, 1.2);
+    }
+  }
+
+  &__date-text {
+    margin: 0;
+
+    @include font(bold, 32px, 1.2);
+
+    color: #000000;
+
+    @include for-size(tablet-only) {
+      @include font(bold, 16px, 1.2);
+    }
+  }
+
+  &__img {
+    margin-top: -300px;
+  }
+}
+
+.fourth .container {
+  display: grid;
+  grid-template-areas:
+    "fourth__text-box fourth__img"
+    "fourth__text-box fourth__img";
+
+  grid-template-columns: 1fr 43%;
+
+  align-items: start;
+
+  @include for-size(tablet-only) {
+    grid-template-columns: 1fr 68%;
+  }
+}
+
+.fourth-mob {
+  display: none;
+
+  @include for-size(mobile-only) {
+    height: 964px;
+    display: block;
+
+    background-image: url("../../img/fourth/fourth_img-mob.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
